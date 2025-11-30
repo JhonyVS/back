@@ -11,9 +11,14 @@ connectDB();
 app.use(morgan('dev')); 
 app.use(express.json()); 
 
-// TODO: Cargar Rutas (lo haremos en Clase 2)
+
+// Rutas de Productos
 const productRoutes = require('./src/presentation/routes/product.routes');
 app.use('/api/v1/products', productRoutes);
+
+// Rutas de Órdenes
+const orderRoutes = require('./src/presentation/routes/order.routes');
+app.use('/api/v1/orders', orderRoutes);
 
 
 // Healthcheck Endpoint (para probar)
