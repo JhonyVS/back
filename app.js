@@ -20,6 +20,10 @@ app.use('/api/v1/products', productRoutes);
 const orderRoutes = require('./src/presentation/routes/order.routes');
 app.use('/api/v1/orders', orderRoutes);
 
+// Rutas de Cupones
+const couponRoutes = require('./src/presentation/routes/coupon.routes');
+app.use('/api/v1/coupons', couponRoutes);
+
 
 // Healthcheck Endpoint (para probar)
 app.get('/api/v1/healthcheck', (req, res) => {
